@@ -14,4 +14,11 @@
 اسکریپت زیر را مستقیم در سرور اجرا کنید:
 
 ```bash
-bash <(curl -Ls https://raw.githubusercontent.com/marzbanix/node-backup/main/install.sh) 
+bash <(curl -Ls https://raw.githubusercontent.com/marzbanix/node-backup/main/install.sh)
+
+# حذف کامل (Uninstall)
+
+دستور زیر را مستقیم در سرور اجرا کنید:
+
+```bash
+rm -rf /opt/backupbot-venv /opt/backup_bot.py /etc/backup_bot.conf /backup /var/log/backup_bot.log && crontab -l | grep -v "backup_bot.py" | crontab -
